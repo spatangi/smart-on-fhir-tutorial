@@ -125,16 +125,16 @@
     $('#holder').show();
     $('#loading').hide();
     //$('#fname').html(p.fname);
-    $('#fname').val(p.fname);
+    $('#fname').html(p.fname);
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
-    $('#height').html(p.height);
-    $('#weight').html(p.weight);
-    $('#systolicbp').html(p.systolicbp);
-    $('#diastolicbp').html(p.diastolicbp);
-    $('#ldl').html(p.ldl);
-    $('#hdl').html(p.hdl);
+    $('#height').val(p.height);
+    $('#weight').val(p.weight);
+    $('#systolicbp').val(p.systolicbp);
+    $('#diastolicbp').val(p.diastolicbp);
+    $('#ldl').val(p.ldl);
+    $('#hdl').val(p.hdl);
   };
 
 })(window);
