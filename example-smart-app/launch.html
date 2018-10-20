@@ -28,7 +28,7 @@
       
       var content = null;
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("GET", filePath, false);
+      xmlhttp.open("GET", 'client.config', false);
       xmlhttp.send();
       if (xmlhttp.status==200) {
           content = xmlhttp.responseText;
