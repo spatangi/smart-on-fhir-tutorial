@@ -9,9 +9,10 @@
 
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
-        alert(smart.patient); 
+         
         var patient = smart.patient;
         var pt = patient.read();
+        alert(pt);
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
