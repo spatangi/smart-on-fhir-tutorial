@@ -26,9 +26,14 @@
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
       
-      var reader = new FileReaderSync();
-      var content = reader.readAsArrayBuffer('client.config');
-    
+      var content = null;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", filePath, false);
+      xmlhttp.send();
+      if (xmlhttp.status==200) {
+          content = xmlhttp.responseText;
+      }
+
       var configtxt = '{"referrer":"https://fhir-ehr.sandboxcerner.com", "client_id":"ffdd8b7d-3818-4e1a-8692-fb9ab121be13", "hospital_id":"1340"}' 
       var configobj = JSON.parse(configtxt);   
              
